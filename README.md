@@ -15,7 +15,7 @@ C#
    - Output "w"
      
 4. Anagram check
-   - Input "listen"
+   - Input "listen" "silent"
    - Output True
 
 5. Remove Duplicate Characters
@@ -41,7 +41,10 @@ C#
 10. Find Missing Number
     - Input [1,2,4,5,6,7]
     - Output 3
-   
+
+11. Integer Palindrome
+    - Input - 121
+    - Output - True
 
 SQL coding Questions - 
 
