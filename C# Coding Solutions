@@ -1,0 +1,32 @@
+1. Palindrome Number
+-> 
+
+//Input - 121
+//Output - True
+//Input - 346
+//Output - False
+
+using System;
+
+public class CheckIntPalindrome
+{
+    public static void CheckPalindrome(int num)
+    {
+        int orignalnum = num;
+        int reversed = 0;
+        
+        for(;num>0;num=num/10)
+        {
+            int digit = num % 10;
+            reversed = reversed * 10 + digit;
+        }
+        
+        Console.WriteLine(reversed == orignalnum); 
+    }
+
+    public static void Main()
+    {
+        CheckPalindrome(121);
+        CheckPalindrome(346);
+    }
+}
