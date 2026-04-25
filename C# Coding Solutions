@@ -30,3 +30,38 @@ public class CheckIntPalindrome
         CheckPalindrome(346);
     }
 }
+
+2. Palindrome String
+
+//Input - MADAM
+//Output - True
+//Input - CAR
+//Output - False
+
+using System;
+
+public class StringPalindrome
+{
+    public static void Palindrome(string input)
+    {
+        bool status = true;
+        
+        for(int i = 0; i<input.Length/2;i++)
+        {
+            if(input[i] != input[input.Length-1-i])
+            {
+                status=false;
+                break;
+            }
+        }
+        
+        Console.WriteLine(status);
+        
+    }
+    
+    public static void Main()
+    {
+        Palindrome("MADAM");
+        Palindrome("CAR");
+    }
+}
