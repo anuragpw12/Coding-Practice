@@ -1,0 +1,27 @@
+//Remove Duplicate Characters
+//Input "programming"
+//Output programin
+
+using System;
+
+public class RemoveDuplicateChar
+{
+    private void RemoveDuplicate(string input)
+    {
+        string output = "";
+        
+        for(int i=0;i<=input.Length-1;i++)
+        {
+            if(!output.Contains(input[i].ToString()))
+                output=output+input[i].ToString();
+        }
+        
+        Console.WriteLine(output);        
+    }
+    
+    public static void Main()
+    {
+        RemoveDuplicateChar r = new RemoveDuplicateChar();
+        r.RemoveDuplicate("programming"); 
+    }
+}
