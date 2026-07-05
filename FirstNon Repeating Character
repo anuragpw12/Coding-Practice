@@ -1,0 +1,39 @@
+//First Non Repeating Character
+//Input "swiss"
+//Output "w"
+
+using System;
+
+public class FirstNonRepeatingChar
+{
+    private void NonRepeatingChar(string input)
+    {
+        string first = "";
+        
+        for(int i = 0; i<=input.Length-1;i++)
+        {
+            first = input[i].ToString();
+            
+            for(int j=i+1;j<=input.Length-1;j++)
+            {
+                if(first==input[j].ToString())
+                {
+                    first="";               
+                    break;
+                }
+            }
+            
+            if(first!=""){
+                break;
+            }
+        }
+      
+      Console.WriteLine(first);
+    }
+    
+    public static void Main()
+    {
+        FirstNonRepeatingChar r = new FirstNonRepeatingChar();
+        r.NonRepeatingChar("swiss"); 
+    }
+}
