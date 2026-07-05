@@ -1,0 +1,39 @@
+//Second Largest
+//Input [10,5,8,20]
+//Output 10
+
+using System;
+using System.Text;
+
+public class SecondLargest
+{
+    private void second(int[] arr)
+    {
+        int first=0;
+        int second=0;
+        
+        for(int i=0;i<arr.Length;i++)
+        {
+            if(arr[i]>first)
+            {
+                second=first;
+                first=arr[i];
+            }
+            else if(arr[i]>second && arr[i]!=second){
+                second=arr[i];
+            }
+        }
+        
+        Console.WriteLine(first);
+        Console.WriteLine(second);
+        
+    }
+    
+    public static void Main()
+    {
+        SecondLargest r = new SecondLargest();
+        
+        int[] arr = { 10,5,8,20,15};
+        r.second(arr);   
+    }
+}
