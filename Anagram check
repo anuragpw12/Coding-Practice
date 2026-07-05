@@ -1,0 +1,36 @@
+//Anagram check
+//Input "listen" "silent"
+//Output True
+
+using System;
+
+public class Anagram
+{
+    private void AnagramCheck(string input,string input2)
+    {
+       if(input.Length!=input2.Length)
+       {
+           Console.WriteLine(false);
+           return;
+       }
+       
+       char[] arr = input.ToCharArray();
+       char[] arr2 = input2.ToCharArray();
+       
+       Array.Sort(arr);
+       Array.Sort(arr2);
+       
+       string s1= new string(arr);
+       string s2= new string(arr2);
+       
+       
+      Console.WriteLine(s1==s2);
+        
+    }
+    
+    public static void Main()
+    {
+        Anagram r = new Anagram();
+        r.AnagramCheck("listen","silent"); 
+    }
+}
