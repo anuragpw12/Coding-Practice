@@ -1,0 +1,27 @@
+//Integer Palindrome
+//Input - 121
+//Output - True
+using System;
+
+public class IntegerPalindrome
+{
+    private void Palindrome(int input)
+    { 
+        int input1=input;
+        int input2=0;
+        
+        for(;input>0;input=input/10)
+        {
+            int lastvalue=input%10;
+            input2=input2*10+lastvalue;
+        }
+             
+        Console.WriteLine(input1==input2);  
+    }
+    
+    public static void Main()
+    {
+        IntegerPalindrome r = new IntegerPalindrome(); 
+        r.Palindrome(121);   
+    }
+}
