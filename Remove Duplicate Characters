@@ -25,3 +25,39 @@ public class RemoveDuplicateChar
         r.RemoveDuplicate("programming"); 
     }
 }
+
+
+HashSet
+
+//remove duplicate
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+public class RemoveDuplicate
+{
+
+    public static void Remove(string input)
+    {
+        var seen = new HashSet<char>();
+        var sb = new StringBuilder();
+        
+        foreach(var c in input)
+        {
+            if(seen.Add(c))
+            {
+                sb.Append(c);
+            }
+        }
+        
+        Console.WriteLine(sb.ToString());
+    }
+    
+    
+    public static void Main()
+    {
+        Remove("prograamming");
+    }
+    
+}
